@@ -1,0 +1,74 @@
+(* ================================================================= *)
+(* RicercaSeq.pas                                                    *)
+(* Ricerca sequenziale.                                              *)
+(* ================================================================= *)
+program RicercaSequenziale;
+
+const   DIM     = 100;
+
+var     lista   : array[1..DIM] of integer;
+        x       : integer;
+        i       : integer;
+        z       : integer;
+
+(* ================================================================= *)
+(* ricercaseq( <x>, <ele-inf>, <ele-sup> )                           *)
+(* ----------------------------------------------------------------- *)
+function ricercaseq( x : integer; a : integer; z : integer ) : integer;
+
+var     i       : integer;
+
+begin
+
+    (* ------------------------------------------------------------- *)
+    (* Se l'elemento non viene trovato, il valore -1 segnala         *)
+    (* l'errore.                                                     *)
+    (* ------------------------------------------------------------- *)
+    ricercaseq := -1;
+
+    (* ------------------------------------------------------------- *)
+    (* Scandisce l'array alla ricerca dell'elemento.                 *)
+    (* ------------------------------------------------------------- *)
+    for i := a to z do begin
+    
+        if x = lista[i] then
+            begin
+                ricercaseq := i;
+            end
+        ;
+        
+    end;
+
+end;
+
+(* ================================================================= *)
+(* Inizio del programma.                                             *)
+(* ----------------------------------------------------------------- *)
+begin
+
+    Writeln( 'Inserire il numero di elementi.' );
+    Writeln( DIM, ' al massimo.' );
+    Readln( z );
+
+    if z > DIM then
+        begin
+            z := DIM;
+        end
+    ;
+
+    Writeln( 'Inserire i valori dell''array' );
+
+    for i := 1 to z do begin
+        Write( 'elemento ', i:2, ': ' );
+        Readln( lista[i] );
+    end;
+
+    Writeln( 'Inserire il valore da cercare' );
+    Readln( x );
+    
+    i := ricercaseq( x, 1, z );
+    
+    Writeln( 'Il valore cercato si trova nell''elemento', i );
+
+end.
+(* ================================================================= *)
