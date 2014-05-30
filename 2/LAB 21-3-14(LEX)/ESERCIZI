@@ -1,0 +1,21 @@
+Esercizi
+1- Modifica il programma Lex di Fig. 3.23 in modo da
+aggiungere la parola chiave while e permettere l’uso del
+simbolo “ ” (underscore) come lettera aggiuntiva.
+2- Scrivere un programma Lex che copia un file sostituendo ogni
+sequenza non vuota di spazi bianchi con un singolo carattere
+vuoto (blank).
+3- Scrivere un programma Lex che copia un programma C
+sostituendo ogni istanza della parola chiave float con
+double.
+4- Scrivere un programma Lex che stampa tutti i tag HTML
+presenti in un file (per default Lex legge dallo standard input).
+5- Scrivere un programma Lex che converte un file trasformando
+ogni parola nel seguente modo:
+- se la prima lettera ` una consonante, allora questa viene
+e
+spostata alla fine e viene aggiunto ‘ay’;
+- se la prima lettera ` una vocale, allora si riscrive la stessa
+e
+parola aggiungendo alla fine ‘ay’ .
+

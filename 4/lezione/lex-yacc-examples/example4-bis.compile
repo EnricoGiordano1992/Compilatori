@@ -1,0 +1,6 @@
+flex example4.l
+yacc -d example4-bis.y
+cc y.tab.c -ly -lfl -o example4-bis 
+
+
+NB: the options  -ly and  -lfl are needed to call the main() (driver program) for both the lexer and the parser in the Lex library.

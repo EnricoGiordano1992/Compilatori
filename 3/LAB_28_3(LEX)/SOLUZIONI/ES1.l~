@@ -1,0 +1,17 @@
+/* programma Lex che sostituisce le vocali con le lettere */
+
+%{
+#include <stdio.h>
+#define FLOAT "float"
+%}
+
+%%
+
+float {printf("double");}
+
+%%
+
+int main(int argc, char **argv)
+{
+yylex();
+}

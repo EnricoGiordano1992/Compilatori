@@ -1,0 +1,24 @@
+Esercizi I
+Per ciascuno dei seguenti problemi, scrivere un programma Lex che
+ne realizza una soluzione.
+
+Sostituire tutte le vocali sia minuscole che maiuscole che
+compaiono in un testo di input con occorrenze di vocali
+diverse da quelle lette.
+
+Contare il numero delle righe e dei caratteri in un testo.
+Invertire le lettere che compongono una data stringa in input.
+Stampare a schermo la stringa letta.
+
+Esercizi II
+- Scrivere un riconoscitore per rispondere alle parole
+inserite.
+- Realizzare uno scanner per un linguaggio simil-Pascal
+che contiene
+identificatori, i.e. sequenze di lettere minuscole e
+cifre che cominciano con una lettera;
+numeri interi e float;
+parole chive: if, then, begin, end, procedure,
+function;
+operatori: +, -, *, /
+
