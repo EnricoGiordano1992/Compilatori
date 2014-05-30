@@ -8,6 +8,7 @@ heat                    return TOKHEAT;
 on|off                  yylval=!strcmp(yytext,"on"); return STATE;
 target                  return TOKTARGET;
 temperature             return TOKTEMPERATURE;
+read			return READ;
 \n                      /* ignore end of line */;
 [ \t]+                  /* ignore whitespace */;
 %%

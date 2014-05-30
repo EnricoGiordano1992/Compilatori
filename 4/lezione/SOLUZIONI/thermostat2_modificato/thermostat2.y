@@ -1,9 +1,12 @@
 %{
 #include <stdio.h>
 #include <string.h>
+
+int temp;
+
 %}
 
-%token NUMBER TOKHEAT STATE TOKTARGET TOKTEMPERATURE
+%token NUMBER TOKHEAT STATE TOKTARGET TOKTEMPERATURE READ
 
 %%
 
@@ -14,6 +17,7 @@ commands:
 
 command: heat_switch
 	| target_set
+	| read
 	;
 
 heat_switch: TOKHEAT STATE 
@@ -28,6 +32,16 @@ heat_switch: TOKHEAT STATE
 target_set: TOKTARGET TOKTEMPERATURE NUMBER
 	{
 		printf("\tTemperature set to %d\n",$3);
+		temp = $3;
+	}
+	;
+
+read: READ NUMBER
+	{
+		printf("\tLettura temperatura: %d\n", $2);
+
+		if($2 == temp)
+			printf("\tTEMPERATURA RAGGIUNTA\n");
 	}
 	;
 %%

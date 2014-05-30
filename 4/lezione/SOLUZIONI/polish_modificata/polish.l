@@ -11,4 +11,6 @@ username        printf("hello");
 \+              {return PLUS;}
 \*              {return MULT;}
 \n              {return NEWLINE;}
+\-		{return MIN;}
+\/		{return DIV;}
 %%

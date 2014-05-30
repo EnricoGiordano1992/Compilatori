@@ -1,7 +1,7 @@
 %{
 #include <stdio.h>
 %}
-%token NUMBER PLUS MULT NEWLINE
+%token NUMBER PLUS MULT NEWLINE MIN DIV
 %%
 input:
     | input line
@@ -11,6 +11,8 @@ line: NEWLINE
 ;
 exp:  exp exp MULT { $$ = $1 * $2; }
     | exp exp PLUS { $$ = $1 + $2; }
+    | exp exp MIN { $$ = $1 - $2;}
+    | exp exp DIV { $$ = $1 / $2;}
     | NUMBER {$$ = $1; }
 ;
 %%
