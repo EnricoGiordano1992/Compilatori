@@ -12,8 +12,19 @@ boolean                 return BOOL;
 if                      return IF;
 while                   return WHILE;
 return                  return RET;
+\+			return PLUS;
+\-			return MIN;
+\*			return MUL;
+\/			return DIV;
+\<			return MINMIN;
+\>			return MAXMAX;
+;			return P_VIRG;
+\(			return OPEN;
+\)			return CLOSE;
+\=			return TAKE;
+\==			return EQ;
 
-[0-9]*                  yylval=atoi(yytext); return NUMBER;
+[0-9]*                  return NUMBER;
 [a-z]*                  return ID;
 [A-Z]*                  return CONST;
 %%

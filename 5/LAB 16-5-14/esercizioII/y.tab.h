@@ -39,19 +39,19 @@
    enum yytokentype {
      BRANCH_A = 258,
      BRANCH_C = 259,
-     ID = 260,
-     EPS = 261,
-     P_VIRG = 262,
-     TYPE = 263
+     P_VIRG = 260,
+     TYPE = 261,
+     ID = 262,
+     EPS = 263
    };
 #endif
 /* Tokens.  */
 #define BRANCH_A 258
 #define BRANCH_C 259
-#define ID 260
-#define EPS 261
-#define P_VIRG 262
-#define TYPE 263
+#define P_VIRG 260
+#define TYPE 261
+#define ID 262
+#define EPS 263
 
 
 
@@ -61,7 +61,7 @@ typedef union YYSTYPE
 {
 
 /* Line 2068 of yacc.c  */
-#line 21 "code.y"
+#line 22 "code.y"
 
  char sym;
 

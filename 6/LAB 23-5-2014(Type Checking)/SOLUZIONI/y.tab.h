@@ -47,7 +47,18 @@
      CONST = 265,
      IF = 266,
      RET = 267,
-     WHILE = 268
+     WHILE = 268,
+     PLUS = 269,
+     MIN = 270,
+     DIV = 271,
+     MUL = 272,
+     MINMIN = 273,
+     MAXMAX = 274,
+     P_VIRG = 275,
+     OPEN = 276,
+     CLOSE = 277,
+     EQ = 278,
+     TAKE = 279
    };
 #endif
 /* Tokens.  */
@@ -62,6 +73,17 @@
 #define IF 266
 #define RET 267
 #define WHILE 268
+#define PLUS 269
+#define MIN 270
+#define DIV 271
+#define MUL 272
+#define MINMIN 273
+#define MAXMAX 274
+#define P_VIRG 275
+#define OPEN 276
+#define CLOSE 277
+#define EQ 278
+#define TAKE 279
 
 
 

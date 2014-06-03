@@ -15,6 +15,7 @@ char AddToTable(char ,char, char);
 	char opd2;
 	char opr;
   };
+
 %}
 
 %union
@@ -22,8 +23,8 @@ char AddToTable(char ,char, char);
  char sym;
 }
 
-%token BRANCH_A BRANCH_C ID EPS P_VIRG TYPE
-%type <sym> block decls decl stmts stmt factor TYPE ID EPS
+%token BRANCH_A BRANCH_C P_VIRG TYPE ID EPS
+//%type <sym> block decls decl stmts stmt factor 
 
 
 %%
@@ -34,18 +35,18 @@ program: block;
 block: BRANCH_A decls stmts BRANCH_C;
 
 decls: decls decl 
-        |  EPS {$$ = (char)$1;};
+        |  EPS ;//{$$ = (char)$1;};
 
-decl: TYPE ID ';' {$$ = (char)$1;} ;
+decl: TYPE ID P_VIRG; //{$$ = (char)$1;} ;
 
 stmts: stmts stmt
-        |  EPS  {$$ = (char)$1;} ;
+        |  EPS;  //{$$ = (char)$1;} ;
 
 stmt: block 
-        | factor P_VIRG {$$ = (char)$1;}
+        | factor P_VIRG //{$$ = (char)$1;}
         | EPS;
 
-factor: ID {$$ = (char)$1;} ;
+factor: ID ;//{$$ = (char)$1;} ;
 
 
 %%
