@@ -1,5 +1,0 @@
-yacc -d th.y
-lex th.l
-gcc -c y.tab.c
-gcc -c lex.yy.c
-gcc -o code y.tab.o lex.yy.o -ll -lm
